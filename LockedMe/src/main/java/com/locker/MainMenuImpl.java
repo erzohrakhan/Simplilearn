@@ -18,15 +18,15 @@ public class MainMenuImpl implements MainMenu {
 
 	// Displays main menu and get Input From User
 	private void mainMenuScreen() {
-		String[] mainMenuOptions = { "\n******** Main Menu ********", "\t1. List all files ",
-				"\t2. File menu operations", "\t3. Exit", "\n Choose any option: " };
+		String[] mainMenuOptions = { "\n******** Main Menu ********", "\n\t1. List all files ",
+				"\n\t2. File menu operations", "\n\t3. Exit", "\n Choose any option: " };
 
 		boolean isNotExit = true;
 		Scanner in = new Scanner(System.in);
 
 		// Infinite loop to get multiple inputs from user
 		while (isNotExit) {
-			Arrays.stream(mainMenuOptions).forEach(System.out::println);
+			Arrays.stream(mainMenuOptions).forEach(System.out::print);
 			// Option selected by user
 			String option = in.next();
 			switch (option) {
